@@ -1,0 +1,9 @@
+[20-Mar-2018 10:06:26 America/Chicago] PHP Parse error:  syntax error, unexpected '"../../../syst.php"' (T_CONSTANT_ENCAPSED_STRING) in /home/optim394/public_html/fnac/forms/cadastro/post/form_editEmpresa.php on line 64
+[12-Jul-2018 17:15:54 America/Chicago] PHP Parse error:  syntax error, unexpected '$rastreio' (T_VARIABLE) in /home/farsiste/public_html/fnac/forms/cadastro/post/form_editResultadoruido.php on line 6
+[12-Jul-2018 17:16:01 America/Chicago] PHP Parse error:  syntax error, unexpected '$rastreio' (T_VARIABLE) in /home/farsiste/public_html/fnac/forms/cadastro/post/form_editResultadoruido.php on line 6
+[13-Jul-2018 14:44:38 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/farsiste/public_html/fnac/forms/cadastro/post/form_editPerfil.php on line 13
+[13-Jul-2018 14:59:54 America/Chicago] PHP Parse error:  syntax error, unexpected '$sql' (T_VARIABLE) in /home/farsiste/public_html/fnac/forms/cadastro/post/form_cadRisco.php on line 10
+[25-Jul-2018 13:39:13 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home/farsiste/public_html/fnac/forms/cadastro/post/form_editAgente.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/farsiste/public_html/fnac/forms/cadastro/post/form_editAgente.php on line 24

@@ -1,0 +1,53 @@
+[28-Feb-2018 23:02:56 UTC] PHP Warning:  PHP Startup: imagick: Unable to initialize module
+Module compiled with module API=20131226
+PHP    compiled with module API=20160303
+These options need to match
+ in Unknown on line 0
+[28-Feb-2018 23:02:56 UTC] PHP Warning:  PHP Startup: SourceGuardian: Unable to initialize module
+Module compiled with module API=20131226
+PHP    compiled with module API=20160303
+These options need to match
+ in Unknown on line 0
+[28-Feb-2018 23:08:50 UTC] PHP Warning:  PHP Startup: imagick: Unable to initialize module
+Module compiled with module API=20131226
+PHP    compiled with module API=20160303
+These options need to match
+ in Unknown on line 0
+[28-Feb-2018 23:08:50 UTC] PHP Warning:  PHP Startup: SourceGuardian: Unable to initialize module
+Module compiled with module API=20131226
+PHP    compiled with module API=20160303
+These options need to match
+ in Unknown on line 0
+[01-Mar-2018 03:38:21 UTC] PHP Warning:  PHP Startup: imagick: Unable to initialize module
+Module compiled with module API=20131226
+PHP    compiled with module API=20160303
+These options need to match
+ in Unknown on line 0
+[01-Mar-2018 03:38:21 UTC] PHP Warning:  PHP Startup: SourceGuardian: Unable to initialize module
+Module compiled with module API=20131226
+PHP    compiled with module API=20160303
+These options need to match
+ in Unknown on line 0
+[16-Jul-2018 11:25:33 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 11:29:17 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 11:36:18 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 11:36:20 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 11:38:27 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 12:18:42 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 12:43:50 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 12:44:11 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 12:57:08 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 13:23:37 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 13:36:14 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 13:37:00 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 13:37:05 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 13:37:30 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 13:48:17 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 13:48:51 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 13:53:35 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 14:05:43 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 14:35:44 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 14:43:31 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 14:48:44 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 14:52:25 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4
+[16-Jul-2018 14:54:24 America/Chicago] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/farsiste/public_html/fnac/php/logout.php on line 4

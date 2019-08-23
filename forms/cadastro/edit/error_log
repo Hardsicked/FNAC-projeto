@@ -1,0 +1,21 @@
+[15-Mar-2018 18:48:15 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/optim394/public_html/fnac/forms/cadastro/edit/edit_epi.php on line 2
+[15-Mar-2018 18:48:15 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/optim394/public_html/fnac/forms/cadastro/edit/edit_epi.php on line 4
+[15-Mar-2018 18:48:15 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/optim394/public_html/fnac/forms/cadastro/edit/edit_epi.php on line 5
+[14-Jul-2018 13:19:56 America/Chicago] PHP Parse error:  syntax error, unexpected '$assoc_ghe' (T_VARIABLE) in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_gheaux1.php on line 43
+[14-Jul-2018 13:20:00 America/Chicago] PHP Parse error:  syntax error, unexpected '$assoc_ghe' (T_VARIABLE) in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_gheaux1.php on line 43
+[16-Jul-2018 11:13:40 America/Chicago] PHP Parse error:  syntax error, unexpected '$assoc_ghe' (T_VARIABLE) in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_gheaux2.php on line 44
+[16-Jul-2018 11:14:06 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_ghe.php on line 50
+[17-Jul-2018 14:07:46 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_risco.php on line 218
+[11-Sep-2018 09:55:00 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_resultado_calor.php on line 90
+[11-Sep-2018 10:02:27 America/Chicago] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_resultado_calor.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_resultado_calor.php on line 4
+[11-Sep-2018 10:03:09 America/Chicago] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_resultado_calor.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_resultado_calor.php on line 4
+[11-Sep-2018 10:04:14 America/Chicago] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_resultado_calor.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/farsiste/public_html/fnac/forms/cadastro/edit/edit_resultado_calor.php on line 4

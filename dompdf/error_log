@@ -1,0 +1,31 @@
+[20-Aug-2019 22:40:32 America/Sao_Paulo] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home2/farsiste/public_html/fnac/dompdf/dompdf/lib/class.pdf.php on line 4027
+[20-Aug-2019 22:41:08 America/Sao_Paulo] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home2/farsiste/public_html/fnac/dompdf/dompdf/lib/class.pdf.php on line 4021
+[20-Aug-2019 22:41:46 America/Sao_Paulo] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home2/farsiste/public_html/fnac/dompdf/dompdf/lib/class.pdf.php on line 4021
+[20-Aug-2019 22:42:47 America/Sao_Paulo] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home2/farsiste/public_html/fnac/dompdf/dompdf/lib/class.pdf.php on line 4001
+[20-Aug-2019 22:46:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function get_cellmap() on null in /home2/farsiste/public_html/fnac/dompdf/dompdf/include/table_cell_frame_reflower.cls.php:30
+Stack trace:
+#0 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/frame_decorator.cls.php(711): Table_Cell_Frame_Reflower->reflow(NULL)
+#1 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/table_row_frame_reflower.cls.php(40): Frame_Decorator->reflow()
+#2 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/frame_decorator.cls.php(711): Table_Row_Frame_Reflower->reflow(Object(Block_Frame_Decorator))
+#3 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/block_frame_reflower.cls.php(750): Frame_Decorator->reflow(Object(Block_Frame_Decorator))
+#4 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/frame_decorator.cls.php(711): Block_Frame_Reflower->reflow(Object(Block_Frame_Decorator))
+#5 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/block_frame_reflower.cls.php(750): Frame_Decorator->reflow(Object(Block_Frame_Decorator))
+#6 /ho in /home2/farsiste/public_html/fnac/dompdf/dompdf/include/table_cell_frame_reflower.cls.php on line 30
+[20-Aug-2019 22:48:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function get_cellmap() on null in /home2/farsiste/public_html/fnac/dompdf/dompdf/include/table_cell_frame_reflower.cls.php:30
+Stack trace:
+#0 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/frame_decorator.cls.php(711): Table_Cell_Frame_Reflower->reflow(NULL)
+#1 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/table_row_frame_reflower.cls.php(40): Frame_Decorator->reflow()
+#2 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/frame_decorator.cls.php(711): Table_Row_Frame_Reflower->reflow(Object(Block_Frame_Decorator))
+#3 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/block_frame_reflower.cls.php(750): Frame_Decorator->reflow(Object(Block_Frame_Decorator))
+#4 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/frame_decorator.cls.php(711): Block_Frame_Reflower->reflow(Object(Block_Frame_Decorator))
+#5 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/block_frame_reflower.cls.php(750): Frame_Decorator->reflow(Object(Block_Frame_Decorator))
+#6 /ho in /home2/farsiste/public_html/fnac/dompdf/dompdf/include/table_cell_frame_reflower.cls.php on line 30
+[20-Aug-2019 23:43:55 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function get_cellmap() on null in /home2/farsiste/public_html/fnac/dompdf/dompdf/include/table_cell_frame_reflower.cls.php:30
+Stack trace:
+#0 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/frame_decorator.cls.php(711): Table_Cell_Frame_Reflower->reflow(NULL)
+#1 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/table_row_frame_reflower.cls.php(40): Frame_Decorator->reflow()
+#2 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/frame_decorator.cls.php(711): Table_Row_Frame_Reflower->reflow(Object(Block_Frame_Decorator))
+#3 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/block_frame_reflower.cls.php(750): Frame_Decorator->reflow(Object(Block_Frame_Decorator))
+#4 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/frame_decorator.cls.php(711): Block_Frame_Reflower->reflow(Object(Block_Frame_Decorator))
+#5 /home2/farsiste/public_html/fnac/dompdf/dompdf/include/block_frame_reflower.cls.php(750): Frame_Decorator->reflow(Object(Block_Frame_Decorator))
+#6 /ho in /home2/farsiste/public_html/fnac/dompdf/dompdf/include/table_cell_frame_reflower.cls.php on line 30

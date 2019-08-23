@@ -1,0 +1,107 @@
+		.icone2d{
+		    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+			filter: grayscale(100%);
+		}
+		.icone2{
+		    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+			filter: grayscale(100%);
+			cursor: pointer;
+		}
+		.icone2:hover{
+		    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+			filter: grayscale(0%);
+			cursor: pointer;
+		}
+		.icone{
+		    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+			filter: grayscale(100%);
+			width: 250px;
+			height: 40px;
+		}
+		.icone:hover{
+		    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+			filter: grayscale(0%);
+			width: 250px;
+			height: 40px;
+		}
+		.icone:active{
+			-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+			filter: grayscale(0%);
+			width: 250px;
+			height: 40px;
+		}
+		.icone img{
+			margin-left: 20px;
+			width: 22px;
+			height: 22px;
+			border-radius: 100%;
+			background-color: navy;
+			float: left; 
+			margin-right: 14px; 
+			margin-top: 12px;
+		}
+		.novobotao{
+			background-color: #94f441;
+			cursor: pointer;
+			color: white; 
+			border-radius: 2px;
+			width: 100%;
+			text-decoration: none;
+		}
+		.novobotao a{
+			color: white;
+			text-decoration: none;
+		}
+		.novobotao a:link{
+			color: white;
+			text-decoration: none;
+		}
+		/* The side navigation menu */
+		.sidenav {
+			height: 100%; /* 100% Full-height */
+			width: 0; /* 0 width - change this with JavaScript */
+			position: fixed; /* Stay in place */
+			z-index: 1; /* Stay on top */
+			top: 0; /* Stay at the top */
+			left: 0;
+			background-color: #111; /* Black*/
+			overflow-x: hidden; /* Disable horizontal scroll */
+			padding-top: 60px; /* Place content 60px from the top */
+			transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+		}
+
+		/* The navigation menu links */
+		.sidenav div {
+			text-decoration: none;
+			font-size: 20px;
+			color: #818181;
+			display: block;
+			transition: 0.3s;
+			cursor: pointer;
+		}
+
+		/* When you mouse over the navigation links, change their color */
+		.sidenav div:hover {
+			color: #f1f1f1;
+		}
+
+		/* Position and style the close button (top right corner) */
+		.sidenav .closebtn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
+
+		/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+		#main {
+			transition: margin-left .5s;
+			padding: 20px;
+		}
+
+		/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+		@media screen and (max-height: 450px) {
+			.sidenav {padding-top: 15px;}
+			.sidenav a {font-size: 18px;}
+		}

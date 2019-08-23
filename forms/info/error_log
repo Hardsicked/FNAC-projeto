@@ -1,0 +1,3 @@
+[04-Apr-2018 17:35:30 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/optim394/public_html/fnac/forms/info/risco.php on line 60
+[16-Jul-2018 09:28:51 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/farsiste/public_html/fnac/forms/info/ghe_risco.php:1) in /home/farsiste/public_html/fnac/forms/info/ghe_risco.php on line 6
+[16-Jul-2018 09:28:51 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farsiste/public_html/fnac/forms/info/ghe_risco.php:1) in /home/farsiste/public_html/fnac/forms/info/ghe_risco.php on line 12

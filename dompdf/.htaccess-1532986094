@@ -1,0 +1,5 @@
+# BEGIN custom php.ini PHP52
+<IfModule mod_suphp.c>
+    suPHP_ConfigPath /home/farsiste/public_html/fnac/dompdf
+</IfModule>
+# END custom php.ini
