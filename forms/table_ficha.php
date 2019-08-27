@@ -11,27 +11,68 @@
 	<head>
 		<script>
 			$(document).ready(function(){
-				$(".imprimir").click(function(){
-					var $valor = $(this).attr("impress");
-					window.open($valor,null);
-				});
-				$(".novocalor").click(function(){
-					var $value = $(this).attr("resultado");
-					window.open($value,null,"height=600,width=800,status=no,toolbar=no,menubar=no,location=no");
-				});
-				$(".editcalor").click(function(){
-					var $value = $(this).attr("ficha");
-					window.open($value,null,"height=600,width=800,status=no,toolbar=no,menubar=no,location=no");
-				});
-				$('#retornomodal').on('show.bs.modal', function (event) {
-		          var button = $(event.relatedTarget); // Button that triggered the modal
-		          var recipient = button.data('whatever');
-		          // Extract info from data-* attribute
-		          // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-		          // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-		          var modal = $(this);
-		          modal.find('.modal-title').text('Agentes Ficha: ' + recipient);
-	            });
+	            $("#btncadastrar").click(function(){
+                    event.preventDefault();
+                    var form = $('#alterar')[0];
+                    var data = new FormData(form);
+                    $("#btncadastrar").prop("disabled", true);
+                    $("#janelabody").hide(100);
+                    $(".progress").show(0);
+                    $.ajax({
+                        url: "form/cadastro/post/form_cadFichaCampo.php",
+                        type: 'POST',
+                        enctype: 'multipart/form-data',
+                        xhr: function () {
+                            var xhr = new window.XMLHttpRequest();
+                            xhr.upload.addEventListener("progress", function (evt) {
+                                if (evt.lengthComputable) {
+                                    var percentComplete = Math.round(evt.loaded / evt.total);
+                                    var percent = percentComplete * 100;
+                                    console.log(percentComplete);
+                                    $('.progress').css({
+                                        width: percentComplete * 100 + '%'
+                                    });
+                                    $('.progress').html(percent + '%');
+                                    if (percentComplete === 1) {
+                                        $('.progress').addClass('hide');
+                                    }
+                                }
+                            }, false);
+                            xhr.addEventListener("progress", function (evt) {
+                                if (evt.lengthComputable) {
+                                    var percentComplete = Math.round(evt.loaded / evt.total);
+                                    console.log(percentComplete);
+                                    $('.progress').css({
+                                        width: percentComplete * 100 + '%'
+                                    });
+                                }
+                            }, false);
+                            return xhr;
+                        },
+                        data: data,
+                        processData: false,
+                        contentType: false,
+                        success: function () {
+                            $("#btncadastrar").prop("disabled", false);
+                            alert("Ficha Cadastrada com Sucesso!");
+                            $(".progress").hide( 500 , function(){
+                                $('#novafichamodal').modal('hide');
+                                $("#janelabody").show(500);
+                            });
+                            location.reload(); 
+                        },
+                        error: function () {
+                            $("#btncadastrar").prop("disabled", false);
+                            alert("Ficha de Campo não pode ser cadastrada!" );
+                            $(".progress").hide( 500 , function(){
+                                $('#novafichamodal').modal('hide');
+                                $("#janelabody").show(500);
+                            });
+                            location.reload();
+                        }
+                    });
+                    return false;
+                });
 			})
 		</script>
 	</head>
