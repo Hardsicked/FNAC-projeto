@@ -328,7 +328,7 @@ $contrato = $_SESSION['cdcontrato'];
 			});
 			$("#fichaQuimico").click(function(){
 				$("#base").fadeOut(250, function(){
-					$("#base").load("forms/table_ficha_quimica.php", function(){
+					$("#base").load("forms/table_ficha.php", function(){
 						$("#base").fadeIn(250);
 						$("#nav_Agente").removeClass("active");
 						$("#nav_Perfis").removeClass("active");
@@ -339,41 +339,7 @@ $contrato = $_SESSION['cdcontrato'];
 						$("#nav_EPI").removeClass("active");
 						$("#nav_Usuarios").removeClass("active");
 						$("#nav_empresas").removeClass("active");
-						$("#title").html("Ficha Quimico  - Projeto FAR");
-					});
-				});
-			});
-			$("#fichaQualitativa").click(function(){
-				$("#base").fadeOut(250, function(){
-					$("#base").load("forms/table_ficha_quali.php", function(){
-						$("#base").fadeIn(250);
-						$("#nav_Agente").removeClass("active");
-						$("#nav_Perfis").removeClass("active");
-						$("#nav_GHE").removeClass("active");
-						$("#nav_Resultados").removeClass("active");
-						$("#nav_Equipamento").removeClass("active");
-						$("#nav_Ficha").addClass("active");
-						$("#nav_EPI").removeClass("active");
-						$("#nav_Usuarios").removeClass("active");
-						$("#nav_empresas").removeClass("active");
-						$("#title").html("Ficha Qualitativa  - Projeto FAR");
-					});
-				});
-			});
-			$("#fichaCalor").click(function(){
-				$("#base").fadeOut(250, function(){
-					$("#base").load("forms/table_ficha_calor.php", function(){
-						$("#base").fadeIn(250);
-						$("#nav_Agente").removeClass("active");
-						$("#nav_Perfis").removeClass("active");
-						$("#nav_GHE").removeClass("active");
-						$("#nav_Resultados").removeClass("active");
-						$("#nav_Equipamento").removeClass("active");
-						$("#nav_Ficha").addClass("active");
-						$("#nav_EPI").removeClass("active");
-						$("#nav_Usuarios").removeClass("active");
-						$("#nav_empresas").removeClass("active");
-						$("#title").html("Ficha Qualitativa  - Projeto FAR");
+						$("#title").html("Ficha de Campo  - Projeto FAR");
 					});
 				});
 			});
