@@ -5,7 +5,7 @@
 	$contratoid = $_SESSION['cdcontrato'];
 	$sql_ghe = "SELECT * FROM tbghe WHERE cdEmpresa = ".$empid." AND cdContrato = ".$contratoid;
 	$query_ghe = mysqli_query($link,$sql_ghe);
-	$sql_agente "SELECT * FROM tbagente";
+	$sql_agente = "SELECT * FROM tbagente";
 	$query_agente = mysqli_query($link,$sql_agente);
 ?>
 	<head>
@@ -22,33 +22,7 @@
                         url: "form/cadastro/post/form_cadFichaCampo.php",
                         type: 'POST',
                         enctype: 'multipart/form-data',
-                        xhr: function () {
-                            var xhr = new window.XMLHttpRequest();
-                            xhr.upload.addEventListener("progress", function (evt) {
-                                if (evt.lengthComputable) {
-                                    var percentComplete = Math.round(evt.loaded / evt.total);
-                                    var percent = percentComplete * 100;
-                                    console.log(percentComplete);
-                                    $('.progress').css({
-                                        width: percentComplete * 100 + '%'
-                                    });
-                                    $('.progress').html(percent + '%');
-                                    if (percentComplete === 1) {
-                                        $('.progress').addClass('hide');
-                                    }
-                                }
-                            }, false);
-                            xhr.addEventListener("progress", function (evt) {
-                                if (evt.lengthComputable) {
-                                    var percentComplete = Math.round(evt.loaded / evt.total);
-                                    console.log(percentComplete);
-                                    $('.progress').css({
-                                        width: percentComplete * 100 + '%'
-                                    });
-                                }
-                            }, false);
-                            return xhr;
-                        },
+                        
                         data: data,
                         processData: false,
                         contentType: false,
@@ -61,14 +35,9 @@
                             });
                             location.reload(); 
                         },
-                        error: function () {
-                            $("#btncadastrar").prop("disabled", false);
-                            alert("Ficha de Campo não pode ser cadastrada!" );
-                            $(".progress").hide( 500 , function(){
-                                $('#novafichamodal').modal('hide');
-                                $("#janelabody").show(500);
-                            });
-                            location.reload();
+                        error: function (xhr, status) {
+                            alert(status);
+            				alert(xhr.responseText);
                         }
                     });
                     return false;
@@ -77,10 +46,10 @@
 		</script>
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col-3">
-					<h2 class="text-center">Fichas Calor</h2>
+					<h2 class="text-center">Fichas de Campo</h2>
 				</div>
 				<div class="col-6"></div>
 				<div class="col-3">
@@ -156,7 +125,7 @@
 			</div>
 		</div>
 		<div class="modal fade" id="agentemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+          <div class="modal-dialog " role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="ModalLabel">Agentes:</h5>
@@ -177,8 +146,8 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="novafichamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+        <div class="modal fade" id="novafichamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+          <div class="modal-dialog" role="document" style="width: 70%;">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Alterar</h5>
@@ -195,11 +164,12 @@
                               <div class="form-group">
 							    <label for="GHE" class="col-form-label">GHE</label>
 							    <select class="form-control" id="GHE" name="GHE">
+							    	<option value="" selected>Selecione</option>
 							      <?php
 										while($assoc_ghe = mysqli_fetch_assoc($query_ghe)){
-											$cdGHE = $assoc_ficha['cdGHE'];
-											$codGHE = $assoc_ficha['codGHE'];
-											echo'<select value="'.$cdGHE.'">'.$codGHE.'</select>';
+											$cdGHE = $assoc_ghe['cdGHE'];
+											$codGHE = $assoc_ghe['codGHE'];
+											echo'<option value="'.$cdGHE.'">'.$codGHE.'</option>';
 										}
 									?>
 							    </select>
@@ -246,10 +216,10 @@
 							    <label for="agente" class="col-form-label">Agentes da ficha:</label>
 							    <select multiple class="form-control" id="agente" size="20" name="agente">
 									<?php
-										while($assoc_ficha = mysqli_fetch_assoc($query_ficha)){
-											$cdAgente = $assoc_ficha['cdAgente'];
-											$nomeAG = $assoc_ficha['nomeAgente'];
-											echo'<select value="'.$cdAgente.'">'.$nomeAG.'</select>';
+										while($assoc_agente = mysqli_fetch_assoc($query_agente)){
+											$cdAgente = $assoc_agente['cdAgente'];
+											$nomeAG = $assoc_agente['nomeAgente'];
+											echo'<option value="'.$cdAgente.'">'.$nomeAG.'</option>';
 										}
 									?>
 							    </select>
@@ -260,7 +230,7 @@
                     <div class="modal-footer">
                                 
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                                <button type="submit" id="btnalterar" class="btn btn-primary">Confirmar Cadastro</button>
+                                <button type="submit" id="btncadastrar" class="btn btn-primary">Confirmar Cadastro</button>
                               </div>
                             </form>
                 </div>
