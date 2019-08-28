@@ -13,7 +13,7 @@
 			$(document).ready(function(){
 	            $("#btncadastrar").click(function(){
                     event.preventDefault();
-                    var form = $('#alterar')[0];
+                    var form = $('#cadastrar')[0];
                     var data = new FormData(form);
                     $("#btncadastrar").prop("disabled", true);
                     $("#janelabody").hide(100);
@@ -22,7 +22,33 @@
                         url: "form/cadastro/post/form_cadFichaCampo.php",
                         type: 'POST',
                         enctype: 'multipart/form-data',
-                        
+                        xhr: function () {
+                            var xhr = new window.XMLHttpRequest();
+                            xhr.upload.addEventListener("progress", function (evt) {
+                                if (evt.lengthComputable) {
+                                    var percentComplete = Math.round(evt.loaded / evt.total);
+                                    var percent = percentComplete * 100;
+                                    console.log(percentComplete);
+                                    $('.progress').css({
+                                        width: percentComplete * 100 + '%'
+                                    });
+                                    $('.progress').html(percent + '%');
+                                    if (percentComplete === 1) {
+                                        $('.progress').addClass('hide');
+                                    }
+                                }
+                            }, false);
+                            xhr.addEventListener("progress", function (evt) {
+                                if (evt.lengthComputable) {
+                                    var percentComplete = Math.round(evt.loaded / evt.total);
+                                    console.log(percentComplete);
+                                    $('.progress').css({
+                                        width: percentComplete * 100 + '%'
+                                    });
+                                }
+                            }, false);
+                            return xhr;
+                        },
                         data: data,
                         processData: false,
                         contentType: false,
@@ -35,9 +61,8 @@
                             });
                             location.reload(); 
                         },
-                        error: function (xhr, status) {
+                        error: function (status) {
                             alert(status);
-            				alert(xhr.responseText);
                         }
                     });
                     return false;
@@ -212,19 +237,8 @@
 	                        </div> 
                         </div>
                         <div class="col-6"> 
-                        	<div class="form-group">
-							    <label for="agente" class="col-form-label">Agentes da ficha:</label>
-							    <select multiple class="form-control" id="agente" size="20" name="agente">
-									<?php
-										while($assoc_agente = mysqli_fetch_assoc($query_agente)){
-											$cdAgente = $assoc_agente['cdAgente'];
-											$nomeAG = $assoc_agente['nomeAgente'];
-											echo'<option value="'.$cdAgente.'">'.$nomeAG.'</option>';
-										}
-									?>
-							    </select>
-							</div>
-							
+							<label for="agente" class="col-form-label">Agentes da ficha:</label>
+							<?php require "cadastro/add_ficha_agente.php"; ?>
 	                    </div>
                     </div>
                     <div class="modal-footer">
