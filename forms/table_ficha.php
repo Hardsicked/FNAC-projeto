@@ -19,7 +19,7 @@
                     $("#janelabody").hide(100);
                     $(".progress").show(0);
                     $.ajax({
-                        url: "form/cadastro/post/form_cadFichaCampo.php",
+                        url: "forms/cadastro/post/form_cadFichaCampo.php",
                         type: 'POST',
                         enctype: 'multipart/form-data',
                         xhr: function () {
@@ -28,7 +28,7 @@
                                 if (evt.lengthComputable) {
                                     var percentComplete = Math.round(evt.loaded / evt.total);
                                     var percent = percentComplete * 100;
-                                    console.log(percentComplete);
+                                    //console.log(percentComplete);
                                     $('.progress').css({
                                         width: percentComplete * 100 + '%'
                                     });
@@ -41,7 +41,7 @@
                             xhr.addEventListener("progress", function (evt) {
                                 if (evt.lengthComputable) {
                                     var percentComplete = Math.round(evt.loaded / evt.total);
-                                    console.log(percentComplete);
+                                    //console.log(percentComplete);
                                     $('.progress').css({
                                         width: percentComplete * 100 + '%'
                                     });
@@ -52,17 +52,15 @@
                         data: data,
                         processData: false,
                         contentType: false,
-                        success: function () {
+                        success: function (data) {
                             $("#btncadastrar").prop("disabled", false);
                             alert("Ficha Cadastrada com Sucesso!");
                             $(".progress").hide( 500 , function(){
                                 $('#novafichamodal').modal('hide');
                                 $("#janelabody").show(500);
                             });
-                            location.reload(); 
-                        },
-                        error: function (status) {
-                            alert(status);
+                            console.log(data);
+							//location.reload(); 
                         }
                     });
                     return false;
@@ -172,7 +170,7 @@
           </div>
         </div>
         <div class="modal fade" id="novafichamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-          <div class="modal-dialog" role="document" style="width: 70%;">
+          <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Alterar</h5>
@@ -184,7 +182,7 @@
                 <div class="progress" style="background: #166fff; display: block; height: 20px; text-align: center; transition: width .3s; width: 0; color: white;"></div>
                 <div class="container-fluid" id="janelabody">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12">
                             <form method="POST" id="cadastrar" enctype="multipart/form-data">
                               <div class="form-group">
 							    <label for="GHE" class="col-form-label">GHE</label>
@@ -234,23 +232,25 @@
 	                        <div class="form-group">
 	                            <label for="sio2" class="col-form-label">% SIO 2:</label>
 	                            <input type="text" name="sio2" class="form-control" id="sio2">
-	                        </div> 
+	                        </div>
+
+							<div> 
+								<label for="agente" class="col-form-label">Agentes da ficha:</label>
+								<?php require "cadastro/add_ficha_agente.php"; ?>
+	                    	</div>
                         </div>
-                        <div class="col-6"> 
-							<label for="agente" class="col-form-label">Agentes da ficha:</label>
-							<?php require "cadastro/add_ficha_agente.php"; ?>
-	                    </div>
+
                     </div>
-                    <div class="modal-footer">
-                                
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                                <button type="submit" id="btncadastrar" class="btn btn-primary">Confirmar Cadastro</button>
-                              </div>
-                            </form>
+
+                    <div class="modal-footer">        
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" id="btncadastrar" class="btn btn-primary">Confirmar Cadastro</button>
+                    </div>
+                </form>
+				
                 </div>
               </div>
             </div>
           </div>
         </div>
 	</body>
-	
