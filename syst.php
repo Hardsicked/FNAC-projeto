@@ -309,9 +309,9 @@ $contrato = $_SESSION['cdcontrato'];
 					});
 				});
 			});
-			$("#fichaRuido").click(function(){
+			$("#ficha").click(function(){
 				$("#base").fadeOut(250, function(){
-					$("#base").load("forms/table_ficha_ruido.php", function(){
+					$("#base").load("forms/table_ficha.php", function(){
 						$("#base").fadeIn(250);
 						$("#nav_Agente").removeClass("active");
 						$("#nav_Perfis").removeClass("active");
@@ -322,58 +322,7 @@ $contrato = $_SESSION['cdcontrato'];
 						$("#nav_EPI").removeClass("active");
 						$("#nav_Usuarios").removeClass("active");
 						$("#nav_empresas").removeClass("active");
-						$("#title").html("Ficha Ruido  - Projeto FAR");
-					});
-				});
-			});
-			$("#fichaQuimico").click(function(){
-				$("#base").fadeOut(250, function(){
-					$("#base").load("forms/table_ficha_quimica.php", function(){
-						$("#base").fadeIn(250);
-						$("#nav_Agente").removeClass("active");
-						$("#nav_Perfis").removeClass("active");
-						$("#nav_GHE").removeClass("active");
-						$("#nav_Resultados").removeClass("active");
-						$("#nav_Equipamento").removeClass("active");
-						$("#nav_Ficha").addClass("active");
-						$("#nav_EPI").removeClass("active");
-						$("#nav_Usuarios").removeClass("active");
-						$("#nav_empresas").removeClass("active");
-						$("#title").html("Ficha Quimico  - Projeto FAR");
-					});
-				});
-			});
-			$("#fichaQualitativa").click(function(){
-				$("#base").fadeOut(250, function(){
-					$("#base").load("forms/table_ficha_quali.php", function(){
-						$("#base").fadeIn(250);
-						$("#nav_Agente").removeClass("active");
-						$("#nav_Perfis").removeClass("active");
-						$("#nav_GHE").removeClass("active");
-						$("#nav_Resultados").removeClass("active");
-						$("#nav_Equipamento").removeClass("active");
-						$("#nav_Ficha").addClass("active");
-						$("#nav_EPI").removeClass("active");
-						$("#nav_Usuarios").removeClass("active");
-						$("#nav_empresas").removeClass("active");
-						$("#title").html("Ficha Qualitativa  - Projeto FAR");
-					});
-				});
-			});
-			$("#fichaCalor").click(function(){
-				$("#base").fadeOut(250, function(){
-					$("#base").load("forms/table_ficha_calor.php", function(){
-						$("#base").fadeIn(250);
-						$("#nav_Agente").removeClass("active");
-						$("#nav_Perfis").removeClass("active");
-						$("#nav_GHE").removeClass("active");
-						$("#nav_Resultados").removeClass("active");
-						$("#nav_Equipamento").removeClass("active");
-						$("#nav_Ficha").addClass("active");
-						$("#nav_EPI").removeClass("active");
-						$("#nav_Usuarios").removeClass("active");
-						$("#nav_empresas").removeClass("active");
-						$("#title").html("Ficha Qualitativa  - Projeto FAR");
+						$("#title").html("Ficha de Campo - Projeto FAR");
 					});
 				});
 			});
@@ -462,16 +411,8 @@ $contrato = $_SESSION['cdcontrato'];
 						<a class="dropdown-item" style="cursor: pointer" id="">Cadeia de Amostradores</a>
 					</div>
 				</li>
-				<li class="nav-item dropdown" id="nav_Ficha">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Ficha de Campo
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" style="cursor: pointer" id="fichaQuimico">Químico</a>
-						<a class="dropdown-item" style="cursor: pointer" id="fichaRuido">Ruído</a>
-						<a class="dropdown-item" style="cursor: pointer" id="fichaQualitativa">Qualitativa</a>
-						<a class="dropdown-item" style="cursor: pointer" id="fichaCalor">Calor</a>
-					</div>
+				<li class="nav-item" id="nav_Ficha">
+					<a class="nav-link" style="cursor: pointer" id="ficha">Fichas de Campo</a>
 				</li>
 				<li class="nav-item" id="nav_APR-HO">
 					<a class="nav-link" style="cursor: pointer" id="APR-HO">APR-HO</a>
