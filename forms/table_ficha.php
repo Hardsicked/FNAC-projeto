@@ -287,7 +287,7 @@
                 <div class="progress" style="background: #166fff; display: block; height: 20px; text-align: center; transition: width .3s; width: 0; color: white;"></div>
                 <div class="container-fluid" id="janelabody">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12">
                             <form method="POST" id="cadastrar" enctype="multipart/form-data">
                               <div class="form-group">
 							    <label for="GHE" class="col-form-label">GHE</label>
@@ -532,6 +532,7 @@
 						<textarea name="justificativa" id="just" required rows="2" col="40" value="" required></textarea>
 					</div>
 	                        </div>
+<<<<<<< HEAD
 
 	                    </div>
 
@@ -540,6 +541,26 @@
 	                        <button type="submit" id="btncadastrar" class="btn btn-primary">Confirmar Cadastro</button>
 	                    </div>
 	                </form>
+=======
+	                        <div class="form-group">
+	                            <label for="sio2" class="col-form-label">% SIO 2:</label>
+	                            <input type="text" name="sio2" class="form-control" id="sio2">
+	                        </div>
+
+							<div> 
+								<label for="agente" class="col-form-label">Agentes da ficha:</label>
+								<?php require "cadastro/add_ficha_agente.php"; ?>
+	                    	</div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">        
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" id="btncadastrar" class="btn btn-primary">Confirmar Cadastro</button>
+                    </div>
+                </form>
+>>>>>>> c0a116714789494fa9b03c01bd84df555792f96a
 				
                 </div>
               </div>

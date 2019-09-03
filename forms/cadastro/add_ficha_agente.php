@@ -4,8 +4,8 @@
 	$qry_subg = mysqli_query($link,$sql_subg);
 	echo'
 	<div class="form-group">
-		<label class="col-form-label">Agente 1:</label>
-		<select class="form-control" name="cdAgente1" required>
+		<label for="cdAgente1" class="col-form-label">Agente 1:</label>
+		<select class="form-control" id="cdAgente1" name="cdAgente1">
 			<option value="0">Nenhuma Substância</option>';
 			foreach ($qry_subg as $agent){
 				echo'<option value="'.$agent["cdAgente"].'">'.$agent["nomeAgente"].'</option>';
