@@ -113,7 +113,7 @@
 	                </button>
 				</div>
 			</div>
-			<div class="row">
+			<div class="col-12">
 				<form method="post" action="">
 					<table class="table table-sm table-light table-stripped table-bordered">
 						<thead class="thead-light">

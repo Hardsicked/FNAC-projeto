@@ -3,17 +3,14 @@
 	error_reporting(E_ALL);
 	$ghe = $_POST["GHE"];
 	$tipoFicha = $_POST["tipo"];
-<<<<<<< HEAD
-=======
+
 	$DR = $_POST["drn"];
->>>>>>> c0a116714789494fa9b03c01bd84df555792f96a
 	$numAmos = $_POST["numAmos"];
 	$codRastreio = $_POST["codRastreio"];
 	$dataAval = $_POST["dataAval"];
 	$concMed = $_POST["concMedicao"];
 	$sio2 = $_POST["sio2"];
-	
-<<<<<<< HEAD
+
 	$cdAgente = $_POST["cdAgente"];
 	mkdir("../../../ficha/".md5($folderuniquename)."/", 0700);
 			$_UP['pasta'] = '../../../ficha/'.md5($folderuniquename).'/';
@@ -146,7 +143,7 @@
 			foreach($contqry as $sqldr){
 				$dr = $sqldr['DR'] + 1;
 			}
-=======
+
 	$cdAgente1 = $_POST["cdAgente1"];
 	$cdAgente2 = $_POST["cdAgente2"];
 	$cdAgente3 = $_POST["cdAgente3"];
@@ -158,23 +155,15 @@
 	$cdAgente9 = $_POST["cdAgente9"];
 	$cdAgente10 = $_POST["cdAgente10"]; 
 
->>>>>>> c0a116714789494fa9b03c01bd84df555792f96a
 	$sql = "INSERT INTO tbficha_campo(
 			cdFicha,
 			cdGHE,
 			tipo,
-<<<<<<< HEAD
-=======
-			DR,
->>>>>>> c0a116714789494fa9b03c01bd84df555792f96a
 			numAmostrador,
 			codRastreio,
 			dataAval,
 			concMedicao,
 			sio2,
-<<<<<<< HEAD
-			cdAgente
-=======
 			cdAgente1,
 			cdAgente2,
 			cdAgente3,
@@ -185,21 +174,16 @@
 			cdAgente8,
 			cdAgente9,
 			cdAgente10
->>>>>>> c0a116714789494fa9b03c01bd84df555792f96a
 		) VALUES(
 			NULL,
 			$ghe,
 			$tipoFicha,
-<<<<<<< HEAD
-=======
 			$DR,
->>>>>>> c0a116714789494fa9b03c01bd84df555792f96a
 			$numAmos,
 			$codRastreio,
 			'$dataAval',
 			$concMed,
 			$sio2,
-<<<<<<< HEAD
 			$cdAgente
 		)";
 	
@@ -213,7 +197,6 @@
 			}
 		}else{
 			echo "<script>alert('Erro ao cadastrar ficha: ".mysqli_error($link)."'); window.close()</script>";
-=======
 			$cdAgente1,
 			$cdAgente2,
 			$cdAgente3,
@@ -230,7 +213,6 @@
 			echo "<script>alert('Ficha Cadastrada com Sucesso.'); window.location=./../../syst.php';</script>";
 		}else{
 			echo "Erro ao Cadastrar Ficha".mysqli_error($link);
->>>>>>> c0a116714789494fa9b03c01bd84df555792f96a
 		}
 	
 ?>
