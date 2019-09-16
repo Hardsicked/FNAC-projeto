@@ -138,22 +138,13 @@
 					echo "<br>Não foi possível enviar o pdf, tente novamente";
 				}
 			}
-			$contsql = "SELECT * FROM tbficha_ghe WHERE cdGHE = ".$_POST["ghe"]." AND tipo = 2 ORDER BY DR DESC LIMIT 1";
+			$contsql = "SELECT * FROM tbficha_ghe WHERE cdGHE = ".$_POST["ghe"]." AND tipo = ".$tipoFicha." ORDER BY DR DESC LIMIT 1";
 			$contqry = mysqli_query($link,$contsql);
 			foreach($contqry as $sqldr){
 				$dr = $sqldr['DR'] + 1;
 			}
 
-	$cdAgente1 = $_POST["cdAgente1"];
-	$cdAgente2 = $_POST["cdAgente2"];
-	$cdAgente3 = $_POST["cdAgente3"];
-	$cdAgente4 = $_POST["cdAgente4"];
-	$cdAgente5 = $_POST["cdAgente5"];
-	$cdAgente6 = $_POST["cdAgente6"];
-	$cdAgente7 = $_POST["cdAgente7"];
-	$cdAgente8 = $_POST["cdAgente8"];
-	$cdAgente9 = $_POST["cdAgente9"];
-	$cdAgente10 = $_POST["cdAgente10"]; 
+	$cdAgente = $_POST["cdAgente"];
 
 	$sql = "INSERT INTO tbficha_campo(
 			cdFicha,
@@ -164,16 +155,7 @@
 			dataAval,
 			concMedicao,
 			sio2,
-			cdAgente1,
-			cdAgente2,
-			cdAgente3,
-			cdAgente4,
-			cdAgente5,
-			cdAgente6,
-			cdAgente7,
-			cdAgente8,
-			cdAgente9,
-			cdAgente10
+			cdAgente
 		) VALUES(
 			NULL,
 			$ghe,
@@ -197,22 +179,6 @@
 			}
 		}else{
 			echo "<script>alert('Erro ao cadastrar ficha: ".mysqli_error($link)."'); window.close()</script>";
-			$cdAgente1,
-			$cdAgente2,
-			$cdAgente3,
-			$cdAgente4,
-			$cdAgente5,
-			$cdAgente6,
-			$cdAgente7,
-			$cdAgente8,
-			$cdAgente9,
-			$cdAgente10
-		)";
-	
-		if(mysqli_query($link, $sql)){
-			echo "<script>alert('Ficha Cadastrada com Sucesso.'); window.location=./../../syst.php';</script>";
-		}else{
-			echo "Erro ao Cadastrar Ficha".mysqli_error($link);
-		}
+		)
 	
 ?>

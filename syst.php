@@ -326,9 +326,43 @@ $contrato = $_SESSION['cdcontrato'];
 					});
 				});
 			});
-			$("#ficha").click(function(){
+			$("#fichav").click(function(){
 				$("#base").fadeOut(250, function(){
-					$("#base").load("forms/table_ficha.php", function(){
+					$("#base").load("forms/table_ficha_vibracao.php", function(){
+						$("#base").fadeIn(250);
+						$("#nav_Agente").removeClass("active");
+						$("#nav_Perfis").removeClass("active");
+						$("#nav_GHE").removeClass("active");
+						$("#nav_Resultados").removeClass("active");
+						$("#nav_Equipamento").removeClass("active");
+						$("#nav_Ficha").addClass("active");
+						$("#nav_EPI").removeClass("active");
+						$("#nav_Usuarios").removeClass("active");
+						$("#nav_empresas").removeClass("active");
+						$("#title").html("Ficha de Campo - Projeto FAR");
+					});
+				});
+			});
+			$("#fichar").click(function(){
+				$("#base").fadeOut(250, function(){
+					$("#base").load("forms/table_ficha_ruido.php", function(){
+						$("#base").fadeIn(250);
+						$("#nav_Agente").removeClass("active");
+						$("#nav_Perfis").removeClass("active");
+						$("#nav_GHE").removeClass("active");
+						$("#nav_Resultados").removeClass("active");
+						$("#nav_Equipamento").removeClass("active");
+						$("#nav_Ficha").addClass("active");
+						$("#nav_EPI").removeClass("active");
+						$("#nav_Usuarios").removeClass("active");
+						$("#nav_empresas").removeClass("active");
+						$("#title").html("Ficha de Campo - Projeto FAR");
+					});
+				});
+			});
+			$("#fichaqu").click(function(){
+				$("#base").fadeOut(250, function(){
+					$("#base").load("forms/table_ficha_quali.php", function(){
 						$("#base").fadeIn(250);
 						$("#nav_Agente").removeClass("active");
 						$("#nav_Perfis").removeClass("active");
@@ -428,13 +462,15 @@ $contrato = $_SESSION['cdcontrato'];
 						<a class="dropdown-item" style="cursor: pointer" id="">Cadeia de Amostradores</a>
 					</div>
 				</li>
-				<li class="nav-item dropdown" id="nav_Ficha">
+				<li class="nav-item" id="nav_Ficha">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Fichas de Campo
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" style="cursor: pointer" id="ficha">Outras</a>
 						<a class="dropdown-item" style="cursor: pointer" id="fichaq">Quimico</a>
+						<a class="dropdown-item" style="cursor: pointer" id="fichar">Ruído</a>
+						<a class="dropdown-item" style="cursor: pointer" id="fichav">Vibração</a>
+						<a class="dropdown-item" style="cursor: pointer" id="fichaqu">Qualitativos</a>
 					</div>
 				</li>
 				<li class="nav-item" id="nav_APR-HO">
